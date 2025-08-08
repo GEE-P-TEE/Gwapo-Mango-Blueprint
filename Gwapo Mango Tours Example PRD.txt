@@ -1,0 +1,366 @@
+# Gwapo Mango Tours - Master Plan
+## Guimaras Mango Farm Experience Landing Page
+
+### App Overview and Objectives
+Gwapo Mango Tours is a premium tourism landing page designed to showcase and sell authentic mango farm experiences in Guimaras, Philippines. The platform connects Filipino and international tourists with world-famous Guimaras mangoes through guided farm tours, creating memorable culinary and cultural experiences.
+
+**Mission**: To provide tourists with an authentic, premium mango-tasting adventure while supporting local Guimaras farmers and showcasing the island's agricultural heritage.
+
+### Target Audience
+- **Primary**: Filipino tourists from other provinces visiting Guimaras
+- **Secondary**: International tourists exploring the Philippines
+- **Tertiary**: Day-trippers from nearby Iloilo City
+- **Niche**: Food enthusiasts and mango lovers seeking authentic experiences
+
+### Core Features and Functionality
+1. **Hero Landing Page** with compelling mango farm imagery and clear booking CTA
+2. **Real-time Booking System** with 12-person daily capacity management
+3. **Interactive Tour Itinerary** showcasing 4 premium mango farms
+4. **Multi-payment Gateway** (Stripe, PayMaya, GCash)
+5. **Instant Booking Confirmation** with pickup details
+6. **Contact Integration** (WhatsApp, phone, email)
+7. **Mobile-first Responsive Design** optimized for tourists on-the-go
+
+### High-level Technical Stack Recommendations
+- **Frontend**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS + shadcn/UI components
+- **Backend & Database**: Supabase (PostgreSQL)
+- **Payment Processing**: Stripe API, PayMaya SDK, GCash integration
+- **Calendar System**: Custom booking calendar with real-time availability
+- **Authentication**: Simple booking form (no user accounts required)
+- **Hosting**: Vercel (seamless Next.js deployment)
+- **Maps**: Google Maps API for pickup location
+
+### Conceptual Data Model
+
+
+# Gwapo Mango Tours - Implementation Plan
+## Step-by-Step Development Roadmap
+
+### Pre-Development Setup (Week 1, Days 1-2)
+1. **Project Initialization**
+   - Set up Next.js 14 project with TypeScript
+   - Configure Tailwind CSS and shadcn/UI
+   - Set up Vercel deployment pipeline
+   - Initialize Git repository
+
+2. **Database Setup**
+   - Create Supabase project
+   - Design and create database tables (tours, bookings, customers, payments)
+   - Set up Row Level Security (RLS) policies
+   - Create database functions for availability checking
+
+3. **Payment Gateway Preparation**
+   - Register Stripe merchant account
+   - Set up PayMaya developer account
+   - Configure GCash business integration
+   - Obtain necessary API keys and webhooks
+
+### Phase 1: MVP Development (Week 1-3)
+
+**Week 1 (Days 3-7): Core Landing Page**
+- [ ] Create responsive homepage with hero section
+- [ ] Implement About Us page with team information
+- [ ] Build Tour Details & Itinerary page with timeline
+- [ ] Set up basic navigation and footer
+- [ ] Integrate Google Fonts (Poppins) and color scheme
+
+**Week 2: Booking System Foundation**
+- [ ] Create interactive booking calendar component
+- [ ] Implement availability checking logic
+- [ ] Build booking form with customer details
+- [ ] Set up basic form validation and error handling
+- [ ] Create booking confirmation page
+
+**Week 3: Payment Integration**
+- [ ] Integrate Stripe payment processing
+- [ ] Implement booking flow with payment
+- [ ] Set up email confirmation system
+- [ ] Create booking management dashboard (admin)
+- [ ] Test end-to-end booking process
+
+### Phase 2: Enhanced Features (Week 4-5)
+
+**Week 4: Additional Payment Methods**
+- [ ] Integrate PayMaya SDK
+- [ ] Add GCash payment option
+- [ ] Implement payment method selection UI
+- [ ] Set up webhook handlers for all payment providers
+- [ ] Test payment flows thoroughly
+
+**Week 5: Communication & Maps**
+- [ ] Add WhatsApp booking integration
+- [ ] Implement Google Maps for pickup location
+- [ ] Create contact form with inquiry handling
+- [ ] Set up emergency contact information display
+- [ ] Add social media integration buttons
+
+### Phase 3: Optimization & Launch (Week 6)
+- [ ] Performance optimization (image compression, lazy loading)
+- [ ] SEO implementation (meta tags, structured data)
+- [ ] Google Analytics and conversion tracking
+- [ ] Cross-browser testing and mobile optimization
+- [ ] User acceptance testing with sample bookings
+- [ ] Production deployment and DNS configuration
+
+### Timeline Summary
+- **Total Development Time**: 6 weeks
+- **MVP Launch**: End of Week 3
+- **Full Feature Launch**: End of Week 6
+- **Soft Launch**: Week 7 (limited marketing)
+- **Full Marketing Launch**: Week 8
+
+### Team Setup Recommendations
+**Solo Developer**: 6-8 weeks full-time
+**Small Team (2-3 people)**:
+- 1 Frontend Developer (Next.js/React)
+- 1 Backend Developer (Supabase/API integration)
+- 1 Designer/QA Tester
+- Timeline: 4-5 weeks
+
+### Optional Tasks and Integrations
+- **Advanced Analytics**: Hotjar for user behavior tracking
+- **Customer Support**: Intercom or Zendesk chat integration
+- **Marketing Automation**: Mailchimp for email campaigns
+- **Review System**: Google Reviews API integration
+- **Multi-language**: i18n implementation for Tagalog support
+
+### Success Metrics
+- **Technical**: Page load speed < 3 seconds, 99% uptime
+- **Business**: 10+ bookings in first month, 95% payment success rate
+- **User Experience**: Mobile-friendly test score 95+, low bounce rate
+
+
+# Gwapo Mango Tours - Design Guidelines
+## Visual Identity and User Experience Standards
+
+### Visual Style Foundation
+
+**Primary Color Palette**
+- **Mango Orange**: #FF8C00 (Primary CTA buttons, highlights, accents)
+- **Tropical Green**: #228B22 (Secondary buttons, icons, nature elements)
+- **Clean White**: #FFFFFF (Background, cards, text areas)
+- **Soft Cream**: #FFF8DC (Alternative background for sections)
+- **Charcoal Gray**: #333333 (Primary text, headings)
+- **Light Gray**: #F5F5F5 (Borders, subtle backgrounds)
+
+**Typography System**
+- **Primary Font**: Poppins (Google Fonts)
+  - Headings: Poppins Bold (700)
+  - Subheadings: Poppins SemiBold (600)
+  - Body Text: Poppins Regular (400)
+  - Captions: Poppins Light (300)
+
+**Font Size Scale**
+```css
+/* Mobile First Approach */
+h1: 2rem (32px) - Hero titles
+h2: 1.75rem (28px) - Section headers
+h3: 1.5rem (24px) - Subsection titles
+h4: 1.25rem (20px) - Card titles
+body: 1rem (16px) - Regular text
+small: 0.875rem (14px) - Captions, fine print
+
+/* Desktop (768px+) */
+h1: 3rem (48px)
+h2: 2.25rem (36px)
+h3: 1.875rem (30px)
+h4: 1.5rem (24px)
+
+
+## `app-flow-pages-and-roles.md`
+
+```markdown
+# Gwapo Mango Tours - App Flow, Pages & Roles
+## Site Structure and User Journey Mapping
+
+### Core Pages Structure
+
+#### 1. Homepage (`/`)
+**Purpose**: Primary landing page to capture interest and drive bookings
+**Key Elements**:
+- Hero section with stunning mango farm imagery
+- Clear value proposition: "Experience Guimaras' World-Famous Mangoes"
+- Prominent CTA: "Book Your Mango Adventure Today!"
+- Tour highlights preview (4 farms, traditional lunch, pickup included)
+- Price display: ₱3,500 per person
+- Quick booking widget showing next available dates
+- Customer testimonials section
+- Instagram feed integration
+
+**Mobile Layout**: Single column, hero image, stacked content
+**Desktop Layout**: Hero with overlay booking widget, two-column highlights
+
+#### 2. About Us (`/about`)
+**Purpose**: Build trust and showcase local expertise
+**Key Elements**:
+- Story of Gwapo Mango Tours and passion for Guimaras mangoes
+- Meet the team section with local guide profiles
+- Why choose us (local expertise, small groups, premium farms)
+- Partnership with local farmers
+- Commitment to sustainable tourism
+- Awards or certifications (if any)
+
+#### 3. Tour Details & Itinerary (`/tour-details`)
+**Purpose**: Comprehensive tour information to convert interest to booking
+**Key Elements**:
+- **Detailed Timeline**:
+  - 7:00 AM - Pickup at Jordan Ferry Dock
+  - 8:00 AM - Oro Verde Mango Plantation (premium tasting)
+  - 10:00 AM - Guimaras Wonder's Farm (tour + photos)
+  - 12:00 PM - Traditional Filipino lunch with mango dishes
+  - 2:00 PM - National Mango Research Center (educational)
+  - 3:30 PM - Eli Sustituido Farm (final tasting + shopping)
+  - 5:00 PM - Return to Jordan Ferry Dock
+- **What's Included**: Transportation, entries, lunch, guides, tastings
+- **What to Bring**: Comfortable shoes, camera, sun protection
+- **Group Size**: Maximum 12 people for intimate experience
+- **Booking CTA**: Prominent throughout page
+
+#### 4. Booking System (`/book`)
+**Purpose**: Convert visitors to paying customers
+**Key Components**:
+- **Step 1**: Date Selection
+  - Interactive calendar showing availability
+  - Real-time availability (12-person limit)
+  - Sold out dates clearly marked
+  - Next available date suggestions
+- **Step 2**: Customer Information
+  - Name, email, phone number
+  - Nationality (for tour customization)
+  - Special dietary requirements
+  - Emergency contact
+- **Step 3**: Payment Processing
+  - Payment method selection (Stripe, PayMaya, GCash)
+  - Secure payment form
+  - Order summary with total (₱3,500)
+  - Terms and conditions checkbox
+- **Step 4**: Confirmation
+  - Booking confirmation number
+  - Pickup details and contact information
+  - Email confirmation sent
+  - Add to calendar option
+
+#### 5. Contact (`/contact`)
+**Purpose**: Provide multiple communication channels
+**Key Elements**:
+- Contact form for general inquiries
+- Phone number with WhatsApp link
+- Email address
+- Pickup location details with Google Maps
+- Emergency contact during tours
+- Office hours and response time expectations
+- FAQ section addressing common questions
+
+#### 6. Booking Confirmation (`/confirmation/[booking-id]`)
+**Purpose**: Post-booking information and reassurance
+**Key Elements**:
+- Booking confirmation details
+- Pickup location and time
+- What to expect on tour day
+- Weather contingency information
+- Contact information for questions
+- Social sharing buttons
+- Review request (post-tour)
+
+### User Roles and Access Rights
+
+#### Tourist/Customer (Public Access)
+**Permissions**:
+- View all public pages
+- Make bookings and payments
+- Access booking confirmation page
+- Contact tour operators
+- View availability calendar
+
+**Restrictions**:
+- Cannot modify existing bookings (must contact directly)
+- Cannot access other customers' information
+- Cannot view admin dashboard
+
+#### Tour Operator/Admin (Protected Access)
+**Permissions**:
+- View booking dashboard
+- Manage tour availability
+- Process refunds/cancellations
+- View customer information
+- Send confirmation emails
+- Update tour details and pricing
+- View payment reports
+- Manage content updates
+
+**Access Method**: Simple admin login (email/password)
+**Dashboard Location**: `/admin` (password protected)
+
+### User Journey Flow
+
+#### Primary Booking Flow
+Homepage → Tour Details → Booking Calendar → Customer Info → Payment → Confirmation
+
+
+#### Alternative Discovery Flows
+Google Search → Tour Details → Booking Social Media → Homepage → About Us → Booking Word of Mouth → Contact → Phone Booking → Email Confirmation WhatsApp Inquiry → Direct Booking Link → Payment
+
+
+### Mobile App Flow Considerations
+
+**Mobile-First Navigation**:
+- Hamburger menu with clear sections
+- Sticky booking CTA button
+- One-thumb navigation zones
+- Swipe gestures for image galleries
+- Quick WhatsApp contact button
+
+**Booking Flow Optimization**:
+- Single-page booking form on mobile
+- Auto-fill contact information
+- Mobile payment optimization
+- GPS integration for pickup location
+- Calendar app integration for tour date
+
+### Page Interconnections
+
+**Internal Linking Strategy**:
+- Homepage links to all major sections
+- Tour Details has multiple booking CTAs
+- About Us links to booking with trust-building context
+- Contact page includes booking widget
+- Confirmation page encourages social sharing
+
+**SEO and Navigation**:
+- Clear breadcrumb navigation
+- Related content suggestions
+- Footer links to all major pages
+- XML sitemap for search engines
+- Schema markup for tour information
+
+### Emergency and Edge Cases
+
+**Booking System Edge Cases**:
+- Simultaneous booking attempts (optimistic locking)
+- Payment failures (retry mechanism)
+- Tour cancellations due to weather
+- Customer no-shows policy
+- Refund processing workflow
+
+**Content Management**:
+- Tour schedule updates
+- Pricing changes
+- Seasonal availability modifications
+- Emergency contact information updates
+- Weather-related announcements
+
+### Analytics and Conversion Tracking
+
+**Key Pages to Track**:
+- Homepage bounce rate and scroll depth
+- Tour Details page engagement time
+- Booking funnel conversion rates
+- Payment completion rates
+- Mobile vs desktop performance
+
+**Conversion Goals**:
+- Booking completion (primary)
+- Contact form submissions (secondary)
+- WhatsApp click-through (tertiary)
+- Social media engagement (awareness)

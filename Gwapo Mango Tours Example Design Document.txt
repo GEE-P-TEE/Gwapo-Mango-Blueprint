@@ -1,0 +1,224 @@
+# Design Guidelines for Gwapo Mango Tours
+
+## 1. General Design Overview
+
+Gwapo Mango Tours embodies the vibrant spirit of Guimaras' world-renowned mango heritage through an authentic, immersive farm-to-table tourism experience. The design personality is **tropical, welcoming, and adventure-focused**, creating an emotional connection between visitors and the island's agricultural treasures.
+
+The UI should evoke the warmth of Filipino hospitality while maintaining professional credibility for international tourists. Every design element should reinforce the premium quality of the mango experience and the authentic local culture that makes Guimaras special.
+
+### 1.1 Core Design Principles
+- **Tropical Authenticity**: Design reflects genuine Filipino farm culture and Guimaras' natural beauty
+- **Mobile-First Accessibility**: Seamless experience for tourists booking on-the-go
+- **Trust & Transparency**: Clear pricing, itinerary, and booking process builds confidence
+- **Visual Storytelling**: Rich imagery showcases the mango farm adventure
+- **Cultural Warmth**: Filipino hospitality translated into digital experience
+
+---
+
+## 2. Color Scheme
+
+### Primary Colors
+- **Mango Orange** `#FF8C00`
+  - Purpose: Primary CTAs, hero elements, booking buttons, active states
+  - Evokes the golden sweetness of premium Guimaras mangoes
+
+- **Tropical Green** `#228B22`
+  - Purpose: Secondary actions, farm imagery accents, success states
+  - Represents the lush agricultural landscape of Guimaras
+
+### Supporting Colors
+- **Warm White** `#FEFEFE`
+  - Purpose: Primary backgrounds, card backgrounds
+  
+- **Soft Cream** `#FFF8DC`
+  - Purpose: Section backgrounds, subtle highlights
+  
+- **Deep Forest** `#1B4D3E`
+  - Purpose: Text headers, navigation elements
+  
+- **Sunset Coral** `#FF6B47`
+  - Purpose: Alert states, urgent notifications
+
+---
+
+## 3. Typography
+
+### 3.1 Font Family
+- **Primary**: Poppins (Google Fonts)
+- **Fallback**: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+
+### 3.2 Font Weights & Hierarchy
+- **Headlines**: 700 Bold (tour titles, hero headings)
+- **Subheadings**: 600 SemiBold (section headers, farm names)
+- **Body Text**: 400 Regular (descriptions, itinerary details)
+- **Button Labels**: 500 Medium (CTAs, navigation)
+- **Captions**: 300 Light (image captions, fine print)
+
+### 3.3 Font Sizes (Mobile First)
+- **H1 Hero**: 32px mobile / 48px desktop
+- **H2 Section**: 24px mobile / 36px desktop
+- **H3 Subsection**: 20px mobile / 28px desktop
+- **Body Text**: 16px mobile / 18px desktop
+- **CTA Buttons**: 18px mobile / 20px desktop
+- **Labels**: 14px mobile / 16px desktop
+
+---
+
+## 4. UI Components
+
+### Homepage/Landing
+- **Layout**: Hero section with full-width mango farm imagery, overlaid booking widget
+- **Interactive Elements**: 
+  - Floating "Book Now" CTA with mango orange background
+  - Quick availability checker showing next 7 days
+  - Testimonial carousel with swipe gestures
+  - Photo gallery with lightbox functionality
+- **Color Behavior**: Hero CTA pulses gently with mango orange glow
+- **Mobile**: Stacked vertical layout, hero image optimized for portrait viewing
+
+### Tour Details & Itinerary
+- **Layout**: Timeline-style itinerary with farm location cards
+- **Interactive Elements**:
+  - Expandable farm detail cards with tap-to-reveal
+  - Photo galleries for each farm location
+  - "Add to Calendar" functionality for each time slot
+- **Color Scheme**: Tropical green timeline with mango orange time markers
+- **Mobile**: Vertical timeline with swipeable farm photo carousels
+
+### Booking System
+- **Layout**: Calendar grid with availability indicators, payment form below
+- **Interactive Elements**:
+  - Calendar with disabled/available date states
+  - Real-time capacity counter (12 people max)
+  - Multi-step payment process with progress indicator
+  - Payment method selection (Stripe/PayMaya/GCash)
+- **Color Behavior**: Available dates in mango orange, full dates in muted gray
+- **Mobile**: Compact calendar view with month navigation arrows
+
+### About Us/Story
+- **Layout**: Alternating text-image sections showcasing team and heritage
+- **Interactive Elements**:
+  - Team member cards with flip animations
+  - "Meet Your Guide" photo gallery
+  - Heritage timeline with scroll-triggered animations
+- **Colors**: Warm cream backgrounds with tropical green accents
+- **Mobile**: Single-column layout with optimized image aspect ratios
+
+### Contact & Location
+- **Layout**: Split-screen with contact form and interactive map
+- **Interactive Elements**:
+  - Google Maps integration showing Jordan Ferry Dock
+  - WhatsApp direct messaging button
+  - Emergency contact quick-dial functionality
+- **Colors**: Clean white background with mango orange form highlights
+- **Mobile**: Stacked layout with map above contact form
+
+### Testimonials/Reviews
+- **Layout**: Masonry grid of review cards with star ratings
+- **Interactive Elements**:
+  - Filter by rating or tour date
+  - Social media integration for sharing
+  - "Write a Review" floating action button
+- **Colors**: Soft cream cards with tropical green star ratings
+- **Mobile**: Single-column card stack with infinite scroll
+
+---
+
+## 5. Mobile UX & Accessibility
+
+### Navigation
+- **Bottom Nav**: Fixed position with Home, Tours, Book, Contact icons
+- **Color Scheme**: Mango orange active states, deep forest inactive
+- **Behavior**: Smooth slide transitions between sections
+
+### Touch Targets
+- **Minimum Size**: 44px for all interactive elements
+- **Button Padding**: 12px vertical, 24px horizontal minimum
+- **Spacing**: 8px minimum between adjacent touch targets
+
+### Accessibility Features
+- **High Contrast**: WCAG AA compliance with 4.5:1 ratio minimum
+- **Screen Reader**: Alt text for all mango farm imagery
+- **Focus States**: Visible keyboard navigation with mango orange outlines
+- **Font Scaling**: Supports up to 200% text scaling
+
+---
+
+## 6. Icons & Visual Style
+
+### Icon Set
+- **Primary**: Lucide React icons for consistency
+- **Style**: Outlined icons with 2px stroke weight
+- **Colors**: Deep forest default, mango orange for active states
+
+### Key Icons
+- **Mango**: Custom illustrated mango icon for branding
+- **Farm**: Barn or tractor icons for farm locations
+- **Clock**: Schedule and timing indicators
+- **Map Pin**: Location markers and pickup points
+- **Calendar**: Booking and availability
+- **Phone**: Contact and emergency numbers
+
+### Photography Style
+- **Subject**: High-resolution mango farm landscapes, authentic Filipino culture
+- **Treatment**: Warm, saturated colors emphasizing golden mangoes and green foliage
+- **Composition**: Rule of thirds, human subjects showing genuine enjoyment
+
+---
+
+## 7. Microinteractions & Animations
+
+### Page Transitions
+- **Style**: Smooth slide transitions (300ms ease-in-out)
+- **Direction**: Left-to-right for forward navigation, right-to-left for back
+
+### Interactive Feedback
+- **Button Hover**: Subtle scale (1.05x) with mango orange glow
+- **Card Hover**: Gentle lift shadow with 4px elevation
+- **Loading States**: Mango-themed spinner with rotating fruit icon
+- **Success States**: Checkmark animation with tropical green background
+
+### Scroll Animations
+- **Farm Cards**: Fade-in with stagger effect as user scrolls
+- **Timeline**: Progressive reveal of itinerary items
+- **Statistics**: Count-up animations for pricing and capacity
+
+---
+
+## 8. Performance Considerations
+
+### Image Optimization
+- **Format**: WebP with JPEG fallback for mango farm photos
+- **Lazy Loading**: Intersection Observer API for below-fold content
+- **Responsive Images**: Multiple breakpoints for optimal loading
+
+### Mobile Optimization
+- **Bundle Size**: Code splitting for booking calendar functionality
+- **Caching**: Service worker for offline tour information viewing
+- **CDN**: Optimized delivery for international tourist access
+
+### Loading Strategy
+- **Critical Path**: Inline CSS for above-fold hero section
+- **Progressive Enhancement**: Basic booking form works without JavaScript
+- **Preloading**: Next available tour dates loaded on homepage
+
+---
+
+## 9. Security & Privacy Design
+
+### Booking Security
+- **Payment Protection**: SSL certificates and PCI compliance indicators
+- **Data Validation**: Real-time form validation with clear error messages
+- **Confirmation**: Multi-step booking confirmation before payment processing
+
+### Privacy Considerations
+- **Data Collection**: Transparent disclosure of information needed for tour logistics
+- **Contact Preferences**: Opt-in for marketing communications
+- **International Compliance**: GDPR-compliant data handling for European tourists
+
+### Trust Indicators
+- **Secure Badges**: Payment processor security logos
+- **Emergency Contact**: Prominent display of 24/7 tour support
+- **Cancellation Policy**: Clear refund and rescheduling terms
+
+---
